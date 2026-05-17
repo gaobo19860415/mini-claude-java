@@ -2,15 +2,6 @@
 
 **一步一步，从零造一个 Claude Code**
 
-[![GitHub stars](https://img.shields.io/github/stars/Windy3f3f3f3f/claude-code-from-scratch?style=flat-square&logo=github)](https://github.com/Windy3f3f3f3f/claude-code-from-scratch)
-[![GitHub forks](https://img.shields.io/github/forks/Windy3f3f3f3f/claude-code-from-scratch?style=flat-square&logo=github)](https://github.com/Windy3f3f3f3f/claude-code-from-scratch/fork)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](#)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](#)
-[![Lines of Code](https://img.shields.io/badge/~4300_lines-minimal-green?style=flat-square)](#)
-
-<br/>
-
 [**📘 在线阅读教程 →**](https://windy3f3f3f3f.github.io/claude-code-from-scratch/)
 &nbsp;&nbsp;|&nbsp;&nbsp;
 [📘 Read Tutorial (English) →](https://windy3f3f3f3f.github.io/claude-code-from-scratch/#/en/)
@@ -30,10 +21,6 @@
 本项目用 **~4300 行代码**（java版本实现）复现了 Claude Code 的核心架构——Agent Loop、13 个工具（含并行执行 + 流式早期启动）、4 层上下文压缩、语义记忆召回、技能系统、多 Agent、MCP 集成……每一步都对照真实源码讲解"它怎么做的 → 我们怎么简化的"。
 
 这不是 demo，是一份**分步教程**——13 章内容，跟着动手写几千行代码，快速理解 Claude Code 这样最好用的 coding agent 的精髓。读完你就理解了 coding agent 的工作原理，无需啃那几十万行代码。
-
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/4f6597e2-6ea3-45ae-8a6b-77662c4e9540" width="100%" autoplay loop muted playsinline></video>
-</div>
 
 ## 📖 分步教程
 
@@ -132,35 +119,6 @@ chat --message "你好，你是谁？"
 - **跨平台**：Windows / macOS / Linux，自动检测 shell（PowerShell / bash / zsh）
 - **错误恢复**：API 限流/过载时指数退避 + 随机抖动重试（最多 3 次），Ctrl+C 优雅中断
 
-```
-
-## 🏗️ 架构图
-
-```
-用户输入
-  │
-  ▼
-┌─────────────────────────────────────┐
-│          Agent Loop                 │
-│                                     │
-│  消息历史 → API (流式) → 实时输出   │
-│       ▲                   │         │
-│       │              ┌────┴───┐     │
-│       │              │文本输出│     │
-│       │              │工具调用│     │
-│       │              └────┬───┘     │
-│       │                   │         │
-│       │   ┌───────┐ ┌────▼───┐     │
-│       │   │截断保护│←│工具执行│     │
-│       │   └───────┘ └────┬───┘     │
-│       │                   │         │
-│       │   ┌───────────────▼───┐     │
-│       └───│Token 追踪 + 压缩 │     │
-│           └───────────────────┘     │
-└─────────────────────────────────────┘
-  │
-  ▼
-任务完成 → 自动保存会话
 ```
 
 ## 🔗 相关项目
