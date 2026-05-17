@@ -6,13 +6,13 @@ spring:
       read-unknown-enum-values-as-null: true
   ai:
     anthropic:
-      api-key: ${ANTHROPIC_API_KEY:sk-d3995ad46a5a4451b3461049b8a66b20}
+      api-key: ${ANTHROPIC_API_KEY:}
       base-url: ${ANTHROPIC_BASE_URL:https://api.deepseek.com/anthropic}
       chat:
         options:
           model: ${MINI_CLAUDE_MODEL:deepseek-v4-pro[1m]}
     openai:
-      api-key: ${OPENAI_API_KEY:123123123123}
+      api-key: ${OPENAI_API_KEY:}
       base-url: ${OPENAI_BASE_URL:https://api.openai.com}
       chat:
         options:
