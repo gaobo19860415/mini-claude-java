@@ -1,0 +1,27 @@
+spring:
+  main:
+    web-application-type: none
+  jackson:
+    deserialization:
+      read-unknown-enum-values-as-null: true
+  ai:
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY:sk-d3995ad46a5a4451b3461049b8a66b20}
+      base-url: ${ANTHROPIC_BASE_URL:https://api.deepseek.com/anthropic}
+      chat:
+        options:
+          model: ${MINI_CLAUDE_MODEL:deepseek-v4-pro[1m]}
+    openai:
+      api-key: ${OPENAI_API_KEY:123123123123}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com}
+      chat:
+        options:
+          model: ${MINI_CLAUDE_MODEL:deepseek-v4-pro[1m]}
+  shell:
+    interactive:
+      enabled: true
+
+mini-claude:
+  model: ${MINI_CLAUDE_MODEL:claude-opus-4-6}
+  max-cost: 0
+  max-turns: 0
