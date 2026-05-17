@@ -22,6 +22,8 @@
 
 这不是 demo，是一份**分步教程**——13 章内容，跟着动手写几千行代码，快速理解 Claude Code 这样最好用的 coding agent 的精髓。读完你就理解了 coding agent 的工作原理，无需啃那几十万行代码。
 
+**本代码是根据 https://github.com/Windy3f3f3f3f/claude-code-from-scratch/tree/main 改写为java版本，仅用于学习claude code构建agent的架构。
+
 ## 📖 分步教程
 
 13 章内容，分两个阶段——先构建一个可用的 Coding Agent，再逐步添加进阶能力。每章都贴真实代码 + Claude Code 源码对照：
@@ -67,7 +69,7 @@ export OPENAI_BASE_URL="https://api.openai.com/v1"
 ### 运行
 
 **JAVA 版**
-
+启动后在控制台，可使用如下命令来使用
 ```bash
 chat --message "你好，你是谁？"
 ```
@@ -76,12 +78,12 @@ chat --message "你好，你是谁？"
 
 | 命令 | 功能 |
 |------|------|
-| `/clear` | 清空对话历史 |
-| `/cost` | 显示累计 token 用量和费用估算 |
-| `/compact` | 手动触发对话压缩 |
-| `/memory` | 列出所有已保存的记忆 |
-| `/skills` | 列出可用的技能 |
-| `/<skill>` | 调用已注册的技能（如 `/commit`） |
+| `clear` | 清空对话历史 |
+| `cost` | 显示累计 token 用量和费用估算 |
+| `compact` | 手动触发对话压缩 |
+| `memory` | 列出所有已保存的记忆 |
+| `skills` | 列出可用的技能 |
+| `<skill>` | 调用已注册的技能（如 `/commit`） |
 
 ## ⚖️ 与 Claude Code 的对比
 
